@@ -21,8 +21,35 @@ class PutApiController {
 
     @PutMapping(path = ["/put-mapping-object"])
     fun putMappingObject(@RequestBody userRequest: UserRequest): UserResponse {
-        Result().apply{
+        return UserResponse().apply {
+            Result().apply{
+                this.resultCode = "OK"
+                this.resultMessage = "성공"
+            }
+        }.apply {
+            this.description = "sdjfklsjfls";
+        }.apply {
+            val userList = mutableListOf<UserRequest>()
 
+             userList.add(userRequest)
+
+             userList.add(UserRequest().apply {
+                 this.name = "우성환1"
+                 this.age = 28
+                 this.address = "주소주소"
+                 this.email = "이메일주소"
+                 this.phoneNumber = "01037195510"
+             })
+
+            userList.add(UserRequest().apply {
+                this.name = "우성환2"
+                this.age = 28
+                this.address = "주소주소"
+                this.email = "이메일주소"
+                this.phoneNumber = "01037195510"
+            })
+
+            this.user = userList
         }
     }
 
