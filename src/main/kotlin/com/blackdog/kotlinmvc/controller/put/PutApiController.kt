@@ -3,7 +3,11 @@ package com.blackdog.kotlinmvc.controller.put
 import com.blackdog.kotlinmvc.controller.get.model.Result
 import com.blackdog.kotlinmvc.controller.get.model.UserRequest
 import com.blackdog.kotlinmvc.controller.get.model.UserResponse
+import org.springframework.http.ResponseEntity
+import org.springframework.validation.BindingResult
+import org.springframework.validation.FieldError
 import org.springframework.web.bind.annotation.*
+import javax.validation.Valid
 
 @RequestMapping("/api")
 @RestController
@@ -20,7 +24,20 @@ class PutApiController {
     }
 
     @PutMapping(path = ["/put-mapping-object"])
-    fun putMappingObject(@RequestBody userRequest: UserRequest): UserResponse {
+    fun putMappingObject(@Valid @RequestBody userRequest: UserRequest, bindingResult: BindingResult): ResponseEntity<String> {
+
+        if (bindingResult.hasErrors()) {
+            // 500 error
+            val msg = StringBuilder()
+            bindingResult.allErrors.forEach {
+                val field = it as FieldError
+                val message = it.defaultMessage
+                msg.append("${field.field} : $message\n")
+            }
+            return ResponseEntity.badRequest().body(msg.toString())
+        }
+        return ResponseEntity.ok("");
+/*
         return UserResponse().apply {
             Result().apply{
                 this.resultCode = "OK"
@@ -51,6 +68,9 @@ class PutApiController {
 
             this.user = userList
         }
+
+ */
+
     }
 
 }
