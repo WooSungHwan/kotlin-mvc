@@ -1,8 +1,6 @@
 package com.blackdog.kotlinmvc.controller.put
 
-import com.blackdog.kotlinmvc.controller.get.model.Result
-import com.blackdog.kotlinmvc.controller.get.model.UserRequest
-import com.blackdog.kotlinmvc.controller.get.model.UserResponse
+import com.blackdog.kotlinmvc.model.http.UserRequest
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.BindingResult
 import org.springframework.validation.FieldError

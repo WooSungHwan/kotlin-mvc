@@ -1,4 +1,4 @@
-package com.blackdog.kotlinmvc.controller.get.model
+package com.blackdog.kotlinmvc.model.http
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies
 import com.fasterxml.jackson.databind.annotation.JsonNaming

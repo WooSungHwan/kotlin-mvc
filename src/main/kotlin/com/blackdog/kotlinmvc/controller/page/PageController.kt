@@ -1,6 +1,6 @@
 package com.blackdog.kotlinmvc.controller.page
 
-import com.blackdog.kotlinmvc.controller.get.model.UserRequest
+import com.blackdog.kotlinmvc.model.http.UserRequest
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ResponseBody

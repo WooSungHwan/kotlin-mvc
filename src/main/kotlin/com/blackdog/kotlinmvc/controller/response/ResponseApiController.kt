@@ -1,6 +1,6 @@
 package com.blackdog.kotlinmvc.controller.response
 
-import com.blackdog.kotlinmvc.controller.get.model.UserRequest
+import com.blackdog.kotlinmvc.model.http.UserRequest
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*

@@ -1,6 +1,6 @@
 package com.blackdog.kotlinmvc.controller.post
 
-import com.blackdog.kotlinmvc.controller.get.model.UserRequest
+import com.blackdog.kotlinmvc.model.http.UserRequest
 import org.springframework.web.bind.annotation.*
 
 @RequestMapping("/api")

@@ -1,4 +1,4 @@
-package com.blackdog.kotlinmvc.controller.get.model
+package com.blackdog.kotlinmvc.model.http
 
 import com.blackdog.kotlinmvc.annotation.StringFormatDateTime
 import com.fasterxml.jackson.databind.PropertyNamingStrategies

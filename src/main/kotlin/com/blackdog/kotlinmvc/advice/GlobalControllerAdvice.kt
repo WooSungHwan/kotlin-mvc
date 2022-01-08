@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 import java.lang.IndexOutOfBoundsException
 import java.lang.RuntimeException
 
-@RestControllerAdvice(basePackageClasses = [ExceptionApiController::class ])
+//@RestControllerAdvice(basePackageClasses = [ExceptionApiController::class ])
 class GlobalControllerAdvice {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
